@@ -1,0 +1,415 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Transistor_IGBT:IRG4PF50W Q1
+U 1 1 652B8FFA
+P 7575 3000
+F 0 "Q1" H 7766 3046 50  0000 L CNN
+F 1 "1MBI400NA-120-02" H 7766 2955 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-247-3_Vertical" H 7775 2925 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irg4pf50w.pdf" H 7575 3000 50  0001 L CNN
+	1    7575 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 652B9745
+P 7675 3525
+F 0 "R4" H 7745 3571 50  0000 L CNN
+F 1 "R22" H 7745 3480 50  0000 L CNN
+F 2 "" V 7605 3525 50  0001 C CNN
+F 3 "~" H 7675 3525 50  0001 C CNN
+	1    7675 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR02
+U 1 1 652B9E6B
+P 7675 3775
+F 0 "#PWR02" H 7675 3525 50  0001 C CNN
+F 1 "GNDD" H 7679 3620 50  0001 C CNN
+F 2 "" H 7675 3775 50  0001 C CNN
+F 3 "" H 7675 3775 50  0001 C CNN
+	1    7675 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7675 3675 7675 3775
+$Comp
+L Connector:Conn_01x01_Female J1
+U 1 1 652BA4BD
+P 9450 2500
+F 0 "J1" H 9478 2526 50  0000 L CNN
+F 1 "BAT+" H 9478 2435 50  0000 L CNN
+F 2 "" H 9450 2500 50  0001 C CNN
+F 3 "~" H 9450 2500 50  0001 C CNN
+	1    9450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J2
+U 1 1 652BA72A
+P 9500 3675
+F 0 "J2" H 9528 3701 50  0000 L CNN
+F 1 "BAT-" H 9528 3610 50  0000 L CNN
+F 2 "" H 9500 3675 50  0001 C CNN
+F 3 "~" H 9500 3675 50  0001 C CNN
+	1    9500 3675
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 3675 8975 3675
+Connection ~ 7675 3675
+Wire Wire Line
+	9250 2500 8975 2500
+Wire Wire Line
+	7675 2500 7675 2800
+$Comp
+L Amplifier_Operational:LM358 U1
+U 1 1 652BAEC0
+P 6450 3000
+F 0 "U1" H 6450 3367 50  0000 C CNN
+F 1 "LM358" H 6450 3276 50  0000 C CNN
+F 2 "" H 6450 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 6450 3000 50  0001 C CNN
+	1    6450 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 652BCA53
+P 7075 3000
+F 0 "R2" V 6868 3000 50  0000 C CNN
+F 1 "1k" V 6959 3000 50  0000 C CNN
+F 2 "" V 7005 3000 50  0001 C CNN
+F 3 "~" H 7075 3000 50  0001 C CNN
+	1    7075 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7375 3000 7225 3000
+Wire Wire Line
+	6925 3000 6800 3000
+$Comp
+L Device:R R3
+U 1 1 652BD24A
+P 7100 3300
+F 0 "R3" V 6893 3300 50  0000 C CNN
+F 1 "10k" V 6984 3300 50  0000 C CNN
+F 2 "" V 7030 3300 50  0001 C CNN
+F 3 "~" H 7100 3300 50  0001 C CNN
+	1    7100 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 652BD6A0
+P 6800 3150
+F 0 "C1" H 6600 3150 50  0000 L CNN
+F 1 "1n" H 6600 3075 50  0000 L CNN
+F 2 "" H 6838 3000 50  0001 C CNN
+F 3 "~" H 6800 3150 50  0001 C CNN
+	1    6800 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 6800 3000
+Wire Wire Line
+	6800 3000 6750 3000
+Wire Wire Line
+	7675 3200 7675 3300
+Wire Wire Line
+	7250 3300 7675 3300
+Connection ~ 7675 3300
+Wire Wire Line
+	7675 3300 7675 3375
+Wire Wire Line
+	6950 3300 6800 3300
+Wire Wire Line
+	6150 3100 6025 3100
+Wire Wire Line
+	6025 3100 6025 3300
+Wire Wire Line
+	6025 3300 6800 3300
+Connection ~ 6800 3300
+$Comp
+L Device:R_POT RV1
+U 1 1 652BF477
+P 2950 5450
+F 0 "RV1" H 2880 5496 50  0000 R CNN
+F 1 "10k" H 2880 5405 50  0000 R CNN
+F 2 "" H 2950 5450 50  0001 C CNN
+F 3 "~" H 2950 5450 50  0001 C CNN
+	1    2950 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR01
+U 1 1 652C01D1
+P 2950 6250
+F 0 "#PWR01" H 2950 6000 50  0001 C CNN
+F 1 "GNDD" H 2954 6095 50  0001 C CNN
+F 2 "" H 2950 6250 50  0001 C CNN
+F 3 "" H 2950 6250 50  0001 C CNN
+	1    2950 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5600 2950 6250
+$Comp
+L Device:R R1
+U 1 1 652C0DA0
+P 2950 5025
+F 0 "R1" H 3020 5071 50  0000 L CNN
+F 1 "39k" H 3020 4980 50  0000 L CNN
+F 2 "" V 2880 5025 50  0001 C CNN
+F 3 "~" H 2950 5025 50  0001 C CNN
+	1    2950 5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 5175 2950 5300
+$Comp
+L Raspi_Pico:Pico U2
+U 1 1 65317CF8
+P 2875 2075
+F 0 "U2" H 2875 3290 50  0000 C CNN
+F 1 "Pico" H 2875 3199 50  0000 C CNN
+F 2 "RPi_Pico:RPi_Pico_SMD_TH" V 2875 2075 50  0001 C CNN
+F 3 "" H 2875 2075 50  0001 C CNN
+	1    2875 2075
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 653195A9
+P 2675 3650
+F 0 "R5" V 2468 3650 50  0000 C CNN
+F 1 "10k" V 2559 3650 50  0000 C CNN
+F 2 "" V 2605 3650 50  0001 C CNN
+F 3 "~" H 2675 3650 50  0001 C CNN
+	1    2675 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDD #PWR03
+U 1 1 65319F0F
+P 1900 3150
+F 0 "#PWR03" H 1900 2900 50  0001 C CNN
+F 1 "GNDD" H 1904 2995 50  0001 C CNN
+F 2 "" H 1900 3150 50  0001 C CNN
+F 3 "" H 1900 3150 50  0001 C CNN
+	1    1900 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2175 2825 1900 2825
+Wire Wire Line
+	1900 2825 1900 3150
+Wire Wire Line
+	2175 2725 2100 2725
+Wire Wire Line
+	2100 2725 2100 3650
+Wire Wire Line
+	2100 3650 2525 3650
+$Comp
+L Device:C C2
+U 1 1 6531B1FF
+P 3025 3875
+F 0 "C2" H 3140 3921 50  0000 L CNN
+F 1 "10nF" H 3140 3830 50  0000 L CNN
+F 2 "" H 3063 3725 50  0001 C CNN
+F 3 "~" H 3025 3875 50  0001 C CNN
+	1    3025 3875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR04
+U 1 1 6531B532
+P 3025 4100
+F 0 "#PWR04" H 3025 3850 50  0001 C CNN
+F 1 "GNDD" H 3029 3945 50  0001 C CNN
+F 2 "" H 3025 4100 50  0001 C CNN
+F 3 "" H 3025 4100 50  0001 C CNN
+	1    3025 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3025 4025 3025 4100
+Wire Wire Line
+	2825 3650 3025 3650
+Wire Wire Line
+	3025 3650 3025 3725
+Text GLabel 4150 3525 2    50   Input ~ 0
+DAC_OUT
+Connection ~ 3025 3650
+$Comp
+L Amplifier_Operational:LM358 U3
+U 2 1 6532DBC2
+P 3825 3750
+F 0 "U3" H 3825 4117 50  0000 C CNN
+F 1 "LM358" H 3825 4026 50  0000 C CNN
+F 2 "" H 3825 3750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3825 3750 50  0001 C CNN
+	2    3825 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3525 3850 3500 3850
+Wire Wire Line
+	3500 3850 3500 4125
+Wire Wire Line
+	3025 3650 3525 3650
+Wire Wire Line
+	4125 4125 4125 3750
+Wire Wire Line
+	3500 4125 4125 4125
+Wire Wire Line
+	4150 3525 4125 3525
+Wire Wire Line
+	4125 3525 4125 3750
+Connection ~ 4125 3750
+$Comp
+L Amplifier_Operational:LM358 U3
+U 3 1 65336038
+P 6225 4400
+F 0 "U3" H 6183 4446 50  0000 L CNN
+F 1 "LM358" H 6183 4355 50  0000 L CNN
+F 2 "" H 6225 4400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 6225 4400 50  0001 C CNN
+	3    6225 4400
+	1    0    0    -1  
+$EndComp
+Text GLabel 6275 4025 2    50   Input ~ 0
++12V
+Wire Wire Line
+	6275 4025 6125 4025
+Wire Wire Line
+	6125 4025 6125 4100
+$Comp
+L power:GNDD #PWR05
+U 1 1 6533940B
+P 6125 4700
+F 0 "#PWR05" H 6125 4450 50  0001 C CNN
+F 1 "GNDD" H 6129 4545 50  0001 C CNN
+F 2 "" H 6125 4700 50  0001 C CNN
+F 3 "" H 6125 4700 50  0001 C CNN
+	1    6125 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4625 2950 4875
+Wire Wire Line
+	5325 2900 6150 2900
+$Comp
+L Device:R R6
+U 1 1 6533DE92
+P 8975 2750
+F 0 "R6" H 9045 2796 50  0000 L CNN
+F 1 "18k" H 9045 2705 50  0000 L CNN
+F 2 "" V 8905 2750 50  0001 C CNN
+F 3 "~" H 8975 2750 50  0001 C CNN
+	1    8975 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 6533E2A0
+P 8975 3250
+F 0 "R7" H 9045 3296 50  0000 L CNN
+F 1 "1k" H 9045 3205 50  0000 L CNN
+F 2 "" V 8905 3250 50  0001 C CNN
+F 3 "~" H 8975 3250 50  0001 C CNN
+	1    8975 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8975 2600 8975 2500
+Connection ~ 8975 2500
+Wire Wire Line
+	8975 2500 7675 2500
+Wire Wire Line
+	8975 2900 8975 3025
+Wire Wire Line
+	8975 3400 8975 3675
+Connection ~ 8975 3675
+Wire Wire Line
+	8975 3675 8750 3675
+Wire Wire Line
+	8975 3025 8750 3025
+Wire Wire Line
+	8750 3025 8750 1925
+Wire Wire Line
+	8750 1925 3575 1925
+Connection ~ 8975 3025
+Wire Wire Line
+	8975 3025 8975 3100
+$Comp
+L Device:C C3
+U 1 1 6534174F
+P 8750 3250
+F 0 "C3" H 8550 3250 50  0000 L CNN
+F 1 "100nF" H 8500 3125 50  0000 L CNN
+F 2 "" H 8788 3100 50  0001 C CNN
+F 3 "~" H 8750 3250 50  0001 C CNN
+	1    8750 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 3100 8750 3025
+Connection ~ 8750 3025
+Connection ~ 8750 3675
+Wire Wire Line
+	8750 3675 7675 3675
+Wire Wire Line
+	8750 3400 8750 3675
+Text GLabel 3175 4625 2    50   Input ~ 0
++12V
+Wire Wire Line
+	2950 4625 3175 4625
+$Comp
+L Switch:SW_Push_SPDT SW?
+U 1 1 6534AED0
+P 4925 4425
+F 0 "SW?" H 4925 4100 50  0000 C CNN
+F 1 "SW_Push_SPDT" H 4925 4191 50  0000 C CNN
+F 2 "" H 4925 4425 50  0001 C CNN
+F 3 "~" H 4925 4425 50  0001 C CNN
+	1    4925 4425
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5325 4425 5125 4425
+Wire Wire Line
+	5325 2900 5325 4425
+Wire Wire Line
+	4725 4325 4450 4325
+Wire Wire Line
+	4450 4325 4450 3750
+Wire Wire Line
+	4450 3750 4125 3750
+Wire Wire Line
+	4725 4525 4450 4525
+Wire Wire Line
+	4450 4525 4450 5450
+Wire Wire Line
+	3100 5450 4450 5450
+Text Notes 3300 5675 0    50   ~ 0
+Manual set I\n
+Text Notes 4275 3250 0    50   ~ 0
+Software set I
+Text Notes 9475 3100 0    50   ~ 0
+Power supply\nBattery\nSolar panel
+$EndSCHEMATC
