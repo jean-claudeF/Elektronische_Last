@@ -6,7 +6,7 @@ Elektronische Last zur Aufnahme von UI und PI - Kurven von Solarpaneln
 - Standalone: LCD zeigt maximale Leistung, Spannung und Strom im MPP an
 - Computergesteuert: Aufnahme der Kurven U = f(I) und P = f(I)
 
-![Picture](/tk_el_load_py.jpg
+![Picture](/tk_el_load_py.jpg)
 
 Doku im PDF
 
